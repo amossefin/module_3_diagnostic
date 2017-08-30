@@ -7,7 +7,10 @@ describe "When user visits root page" do
 
       fill_in("q", with: '80203')
       click_on('Locate')
-      
+
+      expect(current_path).to eq("/search")
+      expect(page).to have_selector("station", count: 10)
+
     end
   end
 end
