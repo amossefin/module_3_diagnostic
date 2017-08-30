@@ -5,8 +5,8 @@ describe "When user visits root page" do
     VCR.use_cassette("features/search_by_zipcode") do
       visit '/'
 
-      fill_in 'Search by zip...', with: '80203'
-      click_on 'Locate'
+      fill_in("q", with: '80203')
+      click_on('Locate')
     end
   end
 end
