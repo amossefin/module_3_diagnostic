@@ -7,6 +7,7 @@ describe "When user visits root page" do
 
       fill_in("q", with: '80203')
       click_on('Locate')
+      
     end
   end
 end
